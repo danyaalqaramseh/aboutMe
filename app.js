@@ -1,9 +1,10 @@
 
-'use strict';
+ 'use strict';
 
-let ageOld =prompt('Do you think my age is 56 ? ?');
 
-if( ageOld.toLowerCase() === 'yes' || ageOld.toLowerCase()==='y' ) {
+
+ function tage(){
+  if( ageOld.toLowerCase() === 'yes' || ageOld.toLowerCase()==='y' ) {
     console.log('test');
     alert('No , My age is 22');
     console.log(ageOld);
@@ -13,13 +14,13 @@ if( ageOld.toLowerCase() === 'yes' || ageOld.toLowerCase()==='y' ) {
    console.log('test');
    alert('you alright im not 56 im 22');
 
-
  }
 
 
- let jobPref = prompt('Do you think i like Programming?');
- if(jobPref.toLowerCase() === 'yes' || jobPref.toLowerCase()==='y' ){
 
+ }
+ function tjob(){
+  if(jobPref.toLowerCase() === 'yes' || jobPref.toLowerCase()==='y' ){
 
     console.log('test');
     alert(' yes i like programming ');
@@ -27,14 +28,18 @@ if( ageOld.toLowerCase() === 'yes' || ageOld.toLowerCase()==='y' ) {
  }
   else if (jobPref.toLowerCase()==='no' || jobPref.toLowerCase()==='n'){
 
-
    console.log('test');
    alert(' you\'re wrong i like programming  ');
 
  }
 
- let otaku=prompt('am i otaku ?  ');
- if( otaku.toLowerCase() === 'yes' || otaku.toLowerCase()==='y' ) {
+
+
+ }
+
+function totaku(){
+
+  if( otaku.toLowerCase() === 'yes' || otaku.toLowerCase()==='y' ) {
 
     console.log('test');
     alert('you are otaku too because you know what means *-*');
@@ -45,12 +50,11 @@ if( ageOld.toLowerCase() === 'yes' || ageOld.toLowerCase()==='y' ) {
 
   alert('are you kidding me ? even ubama knows im an otaku');
 
-
  }
+}
 
- let offcialName=prompt('Do you think my name is Danya ?');
-
- if( offcialName.toLowerCase() === 'yes' || offcialName.toLowerCase()==='y' ) {
+function tname(){
+  if( offcialName.toLowerCase() === 'yes' || offcialName.toLowerCase()==='y' ) {
 
     console.log('test');
     alert('yes im danya what a suprise !!');
@@ -65,9 +69,10 @@ console.log('test');
 }
 
 
+}
+function tknow(){
 
- let knowMe=prompt(' Do you think you realy know me ??');
- if( knowMe.toLowerCase() === 'yes' || knowMe.toLowerCase()==='y' ) {
+  if( knowMe.toLowerCase() === 'yes' || knowMe.toLowerCase()==='y' ) {
 
     console.log('test');
     alert(' Liar , no one can know me  ');
@@ -81,320 +86,114 @@ console.log('test');
 
 
 
+}
 
 }
+
+function twatch(){
+  let noTry = 5;
+  let zero = 0;
+  while(noTry >0){
+      let noAnime=prompt('how many anime i watched in my life?');
+  
+      if (Number(noAnime)===35){ 
+        alert('you alright');
+        console.log(noAnime);
+  
+         break;
+      }
+      else if (Number(noAnime) <= 20 || Number(noAnime) < 35) {
+        alert('Thats too low');
+        noAnime=alert('you have another '+ noTry +'times to try' );
+  
+      }
+      else if ((Number(noAnime)>= 50)  || (Number(noAnime) > 35 )) {
+        alert('Thats too high')
+        noAnime=alert('you have another '+ noTry +'times to try' );
+  
+       }
+      
+       noTry =noTry -1 ; 
+  
+         if (noTry===zero){
+           noAnime= alert('no attempts left');
+            break;
+         }
+        
+  }
+
+
+
+}
+function tanime(){
+  let score =0; 
+  let noattempts = 5;
+  while(noattempts >=0){
+     
+     let animeName =prompt('guess a list of anime that i like ');
+      for( let i =0 ; i<6;i++){
+      if (animeName.toLowerCase() === animeList[i].toLowerCase() ) {
+        console.log('test')  ;
+        score  = score + 1 ;
+     
+        
+      }
+  
+      }
+        noattempts =noattempts - 1;
+        animeName=alert('you have another  '+ noattempts +' Qs  and you will got the score ') ;
+     
+      
+   
+      if(noattempts===0){
+        break ;
+  
+        }
+  
+  
+  }
+  
+  score =alert('no attempt left , your score is ' + score + ' out of 6');
+  
+  
+
+
+
+}
+
+
+
+
+
+let ageOld =prompt('Do you think my age is 56 ? ?');
+tage();
+
+ let jobPref = prompt('Do you think i like Programming?');
+ tjob();
+
+ let otaku=prompt('am i otaku ?  ');
+ totaku();
+
+ let offcialName=prompt('Do you think my name is Danya ?');
+tname();
+ 
+
+ let knowMe=prompt(' Do you think you realy know me ??');
+ tknow();
 alert('Welcome to Story of My Life' );
 
 
-// lab03
+twatch();
 
 
-// while the numbers of trails is less than or equal to 4 
-// keep trying 
-// when it is equal to 4 
-// stop 
-
-// if the ans is right >> "you are right ">> break
-//if the ans is wrong >> ^^^^
 
 
-let noTry = 4;
-while(noTry >0){
-   let noTravel=prompt('how many times i traveled?');
-
-
-    if (noTravel==='0') {
-      alert('you alright');
-      console.log(noTravel);
-
-       break;
-   }
-   
-      noTry =noTry - 1;
-      noTravel=alert('you have another '+ noTry +'times to try' );
-
-   
-  
- 
-    if(!noTry){
-     alert('no attempt left');
-      break ;
-
-}
-}
-
-while(noTry >0){
-   let noFailed=prompt('how many times i faild in life?');
-
-
-   if (noFailed==='2') {
-    alert('you alright');
-    console.log(noFailed);
-
-    break;
-   }
-   
-      noTry =noTry - 1;
-   noFailed=alert('you have another '+ noTry +'times to try' );
-
- 
-   if(!noTry){
-    alert('no attempt left');
-
-    break ;
-         }
-      }
-
-// 3d q
-
-while(noTry >0){
-   let noViews=prompt('how many anime i watched in life -the answer between 30 and 40-?');
-
-
-   if (noViews==='35') {
-   alert('you alright');
-   console.log(noViews);
-
-   break;
-   }
-   
-      noTry =noTry - 1;
-   noViews=alert('you have another '+ noTry +'times to try' );
-
-
-    if(!noTry){
-     alert('no attempt left');
-
-     break ;
-            }
-  }
-
-// 4th q
-while(noTry >0){
-   let noSis=prompt('how many sister do you think i have ?');
-
-
-    if (noSis==='2') {
-    alert('you alright');
-    console.log(noSis);
-
-   break;
-   }
-   
-      noTry =noTry - 1;
-   noSis=alert('you have another '+ noTry +'times to try' );
-
-   if(!noTry){
-    alert('no attempt left');
-
-    break ;
- }
-}
-
-// q 5
-while(noTry >0){
-   let noFailed=prompt('how many times i faild in life?');
-
-
-   if (noBro==='2') {
-   alert('you alright');
-   console.log(noBro);
-
-   break;
-   }
-   
-      noTry =noTry - 1;
-   noBro=alert('you have another '+ noTry +'times to try' );
-
-
-   if(!noTry){
-   alert('no attempt left');
-
-   break ;
-    }
-}
-
-// q 6
-
-while(noTry >0){
-   let noHand=prompt('how many hand i have?');
-
-
-   if (noHand==='2') {
-   alert('you alright');
-   console.log(noHand);
-
-   break;
-   }
-   
-      noTry =noTry - 1;
-   noHand=alert('you have another '+ noTry +'times to try' );
-
-   
-   if(!noTry){
-   alert('no attempt left');
-
-    break ;
- }
-}
-
-// 3rd and 4th instruction in canvas
-
-let presidentList=[ 'trump' , 'ubama' ,'buten' , 'erdogan' , 'queen rania', 'king abdullah' ];
-console.log(presidentList);
-
-let noattempts = 5;
-while(noattempts >0){
-   
-     let resName =prompt('whos the president of jorden ');
-
-
-    if (resName===presidentList[5]) {
-      alert('you alright');
-      console.log(resName);
-
-       break;
-    }
-   
-      noattempts =noattempts - 1;
-      resName=alert('you have another '+ noattempts +'times to try' );
-
-   
     
- 
-    if(!noattempts){
-     alert('no attempt left');
-      break ;
-
-      }
-}
 
 
-while(noattempts >0){
-   
-     let rusName =prompt('whos the president of russia ');
-
-
-    if (rusName===presidentList[2]) {
-      alert('you alright');
-      console.log(resName);
-
-       break;
-    }
-   
-      noattempts =noattempts - 1;
-      rusName=alert('you have another '+ noattempts +'times to try' );
-
-   
-    
- 
-    if(!noattempts){
-     alert('no attempt left');
-      break ;
-
-      }
-}
-
-while(noattempts >0){
-   
-     let americaName =prompt('whos the president of america ');
-
-
-    if (anericaName===presidentList[1]) {
-      alert('you alright');
-      console.log(resName);
-
-       break;
-    }
-   
-      noattempts =noattempts - 1;
-      americaName=alert('you have another '+ noattempts +'times to try' );
-
-   
-    
- 
-    if(!noattempts){
-     alert('no attempt left');
-      break ;
-
-      }
-}
-
-while(noattempts >0){
-   
-     let bestamName =prompt('who was the president of america ');
-
-
-    if (bestamName===presidentList[5]) {
-      alert('you alright');
-      console.log(resName);
-
-       break;
-    }
-   
-      noattempts =noattempts - 1;
-      bestamName=alert('you have another '+ noattempts +'times to try' );
-
-   
-    
- 
-    if(!noattempts){
-     alert('no attempt left');
-      break ;
-
-      }
-}
-
-while(noattempts >0){
-   
-     let queenName =prompt('whos the queen of jorden ');
-
-
-    if (queenName===presidentList[4]) {
-      alert('you alright');
-      console.log(resName);
-
-       break;
-    }
-   
-      noattempts =noattempts - 1;
-      queenName=alert('you have another '+ noattempts +'times to try' );
-
-   
-    
- 
-    if(!noattempts){
-     alert('no attempt left');
-      break ;
-
-      }
-}
-
-while(noattempts >0){
-   
-     let resturName =prompt('whos the president of turkey ');
-
-
-    if (resturName===presidentList[3]) {
-      alert('you alright');
-      console.log(resName);
-
-       break;
-    }
-   
-      noattempts =noattempts - 1;
-      resturName=alert('you have another '+ noattempts +'times to try' );
-
-   
-    
- 
-    if(!noattempts){
-     alert('no attempt left');
-      break ;
-
-      }
-}
-
+let animeList=[ 'Attack on Titan' , 'Death Note' ,'Dragon ball' , 'NeverLand' , 'conan', 'Angels of death' ];
+console.log(animeList);
+tanime();
 
 
 
